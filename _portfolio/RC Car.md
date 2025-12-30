@@ -1,6 +1,6 @@
 ---
 title: "Custom RC Car"
-excerpt: "Remote control car project <br/><img src='/images/rccar.png'>"
+excerpt: "Remote control car project <br/><img src='/images/CAR.png'>"
 collection: portfolio
 ---
 
