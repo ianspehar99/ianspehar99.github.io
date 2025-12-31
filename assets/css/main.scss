@@ -59,16 +59,20 @@
   align-items: center;
   justify-content: space-between;
   transition: box-shadow 0.2s ease;
-}
 
+  height: 100%; // ← add it here
+}
 .portfolio-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+
 .portfolio-item img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  aspect-ratio: 4 / 3;   // pick ratio you like (1/1, 16/9, etc.)
+  object-fit: cover;
   margin-bottom: 0.75rem;
+  border-radius: 4px;    // optional
 }
 
 
