@@ -1,3 +1,8 @@
+---
+title: Portfolio
+permalink: /portfolio/
+---
+
 {% for item in site.portfolio %}
 ---
 
