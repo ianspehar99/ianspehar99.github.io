@@ -8,7 +8,7 @@ redirect_from:
 ---
 <br>
 
-## About Me
+About Me
 =====
 ***
 I am currently pursuing a Master's in Mechanical Engineering at Oregon State University, with a focus on robotics. I’m passionate about using robotic technology to solve real-world problems and create a positive impact, especially in renewable energy and environmental sustainability.
