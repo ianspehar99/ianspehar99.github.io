@@ -5,7 +5,7 @@ collection: portfolio
 image: /images/Rover.png
 ---
 
-Developed an autonomous navigation adn search policy for the OSU Mars Rover, tested in a custom Gazebo Harmonic simulation environment. The goal was to prepare the rover for robot competitions that provide bonus points for efficient, autonomous search in an area filled with obstacles. 
+Developed an autonomous navigation and search policy for the OSU Mars Rover, tested in a custom Gazebo Harmonic simulation environment. The goal was to prepare the rover for robot competitions that provide bonus points for efficient, autonomous search in an area filled with obstacles. 
 
 ![RC Car](/images/sim_sc.png)
 
