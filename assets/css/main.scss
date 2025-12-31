@@ -39,11 +39,12 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+/* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); // 2 columns, equal width
-  grid-auto-rows: auto;                  // rows size naturally
-  gap: 1.5rem;                           // space between cards
+  grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+  grid-auto-rows: auto;                   /* rows size naturally */
+  gap: 1.5rem;                            /* space between cards */
   margin-top: 2rem;
 }
 
@@ -59,25 +60,20 @@
   align-items: center;
   justify-content: space-between;
   transition: box-shadow 0.2s ease;
-
-  height: 100%; // ← add it here
+  height: 100%; /* Ensure card height consistency */
 }
+
 .portfolio-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Image styling */
 .portfolio-image {
   width: 100%;
-  aspect-ratio: 4 / 3;   /* consistent card images */
+  aspect-ratio: 4 / 3;   /* Consistent image aspect ratio */
   overflow: hidden;
   margin-bottom: 0.75rem;
 }
-
-.portfolio-item p {
-  text-decoration: none;
-  color: inherit;
-}
-
 
 .portfolio-image img {
   width: 100%;
@@ -86,21 +82,36 @@
   display: block;
 }
 
+/* Preventing underline on text in card */
+.portfolio-item,
+.portfolio-item * {
+  border-bottom: none !important;
+}
+
+/* Title styling */
 .portfolio-item h3 {
-  color: #1a73e8;        /* link blue */
-  text-decoration: underline;
+  color: #1a73e8;
+  display: inline-block;
+  border-bottom: 2px solid #1a73e8; /* Blue underline */
+  padding-bottom: 2px;
   margin-top: 0.25rem;
 }
 
 .portfolio-item:hover h3 {
   color: #0b5ed7;
+  border-bottom-color: #0b5ed7; /* Hover effect */
 }
 
+/* Excerpt styling */
+.portfolio-item p {
+  text-decoration: none;  /* No underline */
+  color: inherit;         /* Inherit text color */
+}
 
-
+/* Responsive styling */
 @media (max-width: 768px) {
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* Single column on mobile */
   }
 
   .portfolio-item {
