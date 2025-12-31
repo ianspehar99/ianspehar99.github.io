@@ -1,1 +1,110 @@
---- --- /* * Minimal Mistakes Jekyll Theme * * - Michael Rose * - mademistakes.com * - https://twitter.com/mmistakes * */ @import "vendor/breakpoint/breakpoint"; // media query mixins @import "variables"; @import "mixins"; @import "vendor/susy/susy"; @import "reset"; @import "base"; @import "utilities"; @import "animations"; @import "tables"; @import "buttons"; @import "notices"; @import "masthead"; @import "navigation"; @import "footer"; @import "syntax"; @import "forms"; @import "page"; @import "archive"; @import "sidebar"; @import "vendor/font-awesome/fontawesome"; @import "vendor/font-awesome/solid"; @import "vendor/font-awesome/brands"; @import "vendor/magnific-popup/magnific-popup"; @import "print"; .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); // 2 columns, equal width grid-auto-rows: auto; // rows size naturally gap: 1.5rem; // space between cards margin-top: 2rem; } .portfolio-item { background: #fff; border: 1px solid #ddd; padding: 1rem; text-align: center; text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: box-shadow 0.2s ease; height: 100%; // ← add it here } .portfolio-item:hover { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); } .portfolio-image { width: 100%; aspect-ratio: 4 / 3; /* consistent card images */ overflow: hidden; margin-bottom: 0.75rem; } .portfolio-item p { text-decoration: none; color: inherit; } .portfolio-image img { width: 100%; height: 100%; object-fit: cover; display: block; } .portfolio-item h3 { color: #1a73e8; /* link blue */ text-decoration: underline; margin-top: 0.25rem; } .portfolio-item:hover h3 { color: #0b5ed7; } @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr; } .portfolio-item { width: 100%; } }
+---
+---
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
+  grid-auto-rows: auto;                   /* rows size naturally */
+  gap: 1.5rem;                            /* space between cards */
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s ease;
+  height: 100%; /* Ensure card height consistency */
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Image styling */
+.portfolio-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* Consistent image aspect ratio */
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Title styling */
+.portfolio-item h3 {
+  color: #1a73e8;
+  display: inline-block;
+  border-bottom: 2px solid #1a73e8; /* Blue underline */
+  padding-bottom: 2px;
+  margin-top: 0.25rem;
+}
+
+.portfolio-item:hover h3 {
+  color: #0b5ed7;
+  border-bottom-color: #0b5ed7; /* Hover effect */
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;  /* Single column on mobile */
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+}
