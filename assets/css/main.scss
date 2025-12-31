@@ -66,14 +66,30 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-
-.portfolio-item img {
+.portfolio-image {
   width: 100%;
-  aspect-ratio: 4 / 3;   // pick ratio you like (1/1, 16/9, etc.)
-  object-fit: cover;
+  aspect-ratio: 4 / 3;   /* consistent card images */
+  overflow: hidden;
   margin-bottom: 0.75rem;
-  border-radius: 4px;    // optional
 }
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-item h3 {
+  color: #1a73e8;        /* link blue */
+  text-decoration: underline;
+  margin-top: 0.25rem;
+}
+
+.portfolio-item:hover h3 {
+  color: #0b5ed7;
+}
+
 
 
 @media (max-width: 768px) {

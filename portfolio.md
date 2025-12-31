@@ -8,8 +8,11 @@ permalink: /portfolio/
     <a class="portfolio-item" href="{{ item.url }}">
       
       {% if item.image %}
-        <img src="{{ item.image }}" alt="{{ item.title }}">
-      {% endif %}
+  <div class="portfolio-image">
+    <img src="{{ item.image }}" alt="{{ item.title }}">
+  </div>
+        {% endif %}
+
 
       <h3>{{ item.title }}</h3>
 
