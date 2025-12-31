@@ -3,15 +3,18 @@ title: Portfolio
 permalink: /portfolio/
 ---
 
-{% for item in site.portfolio %}
----
+<div class="portfolio-grid">
+  {% for item in site.portfolio %}
+    <a class="portfolio-item" href="{{ item.url }}">
+      
+      {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.title }}">
+      {% endif %}
 
-### [{{ item.title }}]({{ item.url }})
+      <h3>{{ item.title }}</h3>
 
-{% if item.image %}
-<img src="{{ item.image }}" alt="{{ item.title }}" style="max-width:300px;">
-{% endif %}
+      <p>{{ item.excerpt }}</p>
 
-{{ item.excerpt }}
-
-{% endfor %}
+    </a>
+  {% endfor %}
+</div>
