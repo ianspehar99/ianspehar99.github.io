@@ -63,11 +63,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between; /* Ensures content stays spaced evenly */
   transition: box-shadow 0.2s ease;
   
-  min-height: 300px; /* Add a minimum height */
+  min-height: 300px; /* Ensure minimum height */
+  border-bottom: 1px solid #ddd;  /* Explicit bottom border */
 }
-
 
 .portfolio-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -90,10 +91,7 @@
 
 /* Disable Minimal Mistakes link underline inside portfolio cards */
 .portfolio-item,
-.portfolio-item *,
-.portfolio-item::before,
-.portfolio-item::after {
-  
+.portfolio-item * {
   text-decoration: none !important;
 }
 
