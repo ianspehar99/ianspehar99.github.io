@@ -64,8 +64,10 @@
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.2s ease;
-  height: 100%; /* Ensure card height consistency */
+  
+  min-height: 300px; /* Add a minimum height */
 }
+
 
 .portfolio-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
