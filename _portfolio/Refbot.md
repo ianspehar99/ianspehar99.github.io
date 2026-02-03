@@ -6,20 +6,20 @@ collection: portfolio
 image: /images/ref_bot_thumbnail.png
 ---
 
-**Motivation**  
+### Motivation
 My friends and I love playing this game called "Snaps", where you score points by throwing dice high into the air, so they bounce off a table and hit the ground before the other team can catch them. The issue was that this leads to constant arguments about whether a throw was high enough to be legal. Even after putting up a string for reference, it was still hard to call close ones from below. To remove all subjectivity, and save our friendships, I built RefBot, a robot referee designed to autonomously judge throw height.
 
 ![Rover Sim](/images/sim_sc.png)
 
-**System Overview**
+### System Overview###
 
 RefBot uses a fixed camera to track the vertical position of a thrown die relative to a predefined reference line in the camera frame. A Raspberry Pi processes video frames in real time, determines the maximum height reached during a throw, and provides immediate feedback through an LCD screen and RGB LEDs.
 
 
-Frame: Built using LEGO Technic parts and duct tape
+**Frame**: Built using LEGO Technic parts and duct tape
 LEGO Technic and duct tape allowed for rapid prototyping without custom parts. The components are cheap, reusable across projects, and surprisingly strong, which made it easy to iterate on the design while focusing primarily on software and electronics instead of committing to 3D printing
 
-Camera: Logitech USB Webcam (≈30 FPS, ~15 FPS under processing load)
+**Camera**: Logitech USB Webcam (≈30 FPS, ~15 FPS under processing load)
 I chose a camera as my sensor over other alternatives such as an multrasonic sensor or LiDar due to combo of simplicity, speed, and ability to easily cover a large area.
 
 I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller form factor, but I got tired of dealing with ribbon cable connectivity issues, so I switched to the Logitech webcam I had sitting around.  The webcam was readily available and, with adjustments to account for motion blur, proved sufficient for reliable throw detection.
@@ -52,20 +52,20 @@ Image processing workflow:
 
 
 
+### Difficulties
+As with any robotics project, especially one where you are bringing it from idea to actually using it for something, there were a lot of difficulties to vercome
 
-Difficulties: As with any roboitcs project, especially one where you are bringing it from idea to actually using it for something, there were a lot of difficulties to vercome
+**Hardware:** - Pi camera stopped working (used for FPS/small), ordered new one still stopped working, I think my raspberry pi ribbon cable port is broken. Used cheap USB webcam with lower FPS, but was adequate after code adjustments
 
-Hardware - Pi camera stopped working (used for FPS/small), ordered new one still stopped working, think my raspberry pi ribbon cable port is broken. Used cheap webcam with lower FPS, but worked fine after making some adjustments to account for motion blur
-
-Perception:
+**Perception:**
 
 
 ALSO LIGHING AND DIFFERENT ENVIRONMENT/COMPUTER VISION IS REALLY HARD AND TEMPERAMENTAL AND SENSITIVE TO DIFFERENT ENVIRONEMTNS, Thresholding
 
 
-Integration :
+**Integration:**
 
-Reliability: 
+**Reliability:**
 ROBOTICS IS HARD/ BIG DIFFERENCE BETWEEN SHOWING PROOF OF CONCEPT AND HAVING IT WORK 100% FOR ITS PROPER USE. Also this was a situation where there was some pressure on the line, 
 
 FULL PROCESS GOING FROM SOFTWARETO ELECTRIC TO TESTING AND ACTUALY TRYING TO GET IT WORK IN FRONTOF PEOPLE AND HAVE IT WORK PERFECTLY LESSONS LEARNED FS STORY OF FIRST TIME SHOWING IT TO MY FRIENDS FUNNY HAHA, was npt a smooth launch, needed to play games with freinds for a while to work out, pause game to check frames and logic
