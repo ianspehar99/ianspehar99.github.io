@@ -3,7 +3,7 @@ title: "RefBot"
 excerpt: "Automated Video Assisted Referee for Dice Game"
 order: 1
 collection: portfolio
-image: /images/ref_bot_thumbnail
+image: /images/ref_bot_thumbnail.png
 ---
 
 Motivation: 
