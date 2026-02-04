@@ -3,18 +3,17 @@ title: "RefBot"
 excerpt: "Automated Video Assisted Referee for Dice Game"
 order: 1
 collection: portfolio
-image: /images/ref_bot_thumbnail.png
+image: /images/Moneyshot.png
 ---
 
 ### Motivation
 My friends and I love playing this game called "Snaps", where you score points by throwing dice high into the air, so they bounce off a table and hit the ground before the other team can catch them. The issue was that this leads to constant arguments about whether a throw was high enough to be legal. Even after putting up a string for reference, it was still hard to call close ones from below. To remove all subjectivity, and save our friendships, I built RefBot, a robot referee designed to autonomously judge throw height.
 
-![Rover Sim](/images/sim_sc.png)
+!(/images/Secondbest.png)
 
-### System Overview###
+### System Overview
 
 RefBot uses a fixed camera to track the vertical position of a thrown die relative to a predefined reference line in the camera frame. A Raspberry Pi processes video frames in real time, determines the maximum height reached during a throw, and provides immediate feedback through an LCD screen and RGB LEDs.
-
 
 **Frame**: Built using LEGO Technic parts and duct tape
 LEGO Technic and duct tape allowed for rapid prototyping without custom parts. The components are cheap, reusable across projects, and surprisingly strong, which made it easy to iterate on the design while focusing primarily on software and electronics instead of committing to 3D printing
@@ -49,7 +48,7 @@ Image processing workflow:
     - If the score is psotive, print with a good message, lights go green
 - Clear all logged heights and wait for next throw
 
-
+<img src="/images/LCDOUTPUT" alt="Good throw message" style="max-width:400px;">
 
 
 ### Difficulties
@@ -71,6 +70,9 @@ ROBOTICS IS HARD/ BIG DIFFERENCE BETWEEN SHOWING PROOF OF CONCEPT AND HAVING IT 
 FULL PROCESS GOING FROM SOFTWARETO ELECTRIC TO TESTING AND ACTUALY TRYING TO GET IT WORK IN FRONTOF PEOPLE AND HAVE IT WORK PERFECTLY LESSONS LEARNED FS STORY OF FIRST TIME SHOWING IT TO MY FRIENDS FUNNY HAHA, was npt a smooth launch, needed to play games with freinds for a while to work out, pause game to check frames and logic
 
 
+<img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:400px;">
+<img src="/images/lightsetup" alt="Backlight so the ref can see" style="max-width:400px;">
+
 
 
 Lessons Learned:
@@ -83,21 +85,15 @@ How hard/imperfect motion capture/moving object recognition with computer vision
 Learned my lesson to be mindful when following online resources
 
 
+!(/images/Thirdbest.png)
+
+
 Overall, this was a super rewarding project, combining my passion robotics with solving an actual (extremely minor) problem in my life. It was also really fun surprising my friends with it and getting their reactions. It was so cool to be able to see the impact it had, I have never felt so satisifed with myself after playing for hours and having zero arguments. Any time someone had doubts I could go and check teh frames and show everyone what the robot saw (Fig xxx from above), it was like real life Var in soccer
 
 ALSO HELPED TO ACT AS VAR FOR THE ONES OUT OF FRAME WE COULD ALL LOOK AT THE RAJECTORY AND INTERPOLSTE, MENTION THAT TO SOUND MORE NERDY LESS DRINKY.
 
 
 
-
-
-
-<!-- <img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;"> -->
-<!-- ADD IN SOME DETAILS FOR THE ROBOTICISTS, CHALLENGES SUCH AS LIDAR WORKAROUND, HOW I DID THE LIDAR / BUG ALGORITHM THE PEOPLE LOOKING AT THIS ARE GOING TO WANT TO SEE SOME TECHNICAL SHIT AND YOULL BE LIT 
-
-+ ADD IN ROS FLEX THAT SHIT BOYYY ROS2 BABY-->
-
-Created an autonomous navigation mode for the rover, allowing it to navigate around obstacles and find a red flag without operator interference.
 
 ## Code
 Check out the [GitHub repo for this project](https://github.com/ianspehar99/ROB599_Rover_Search_Project).
