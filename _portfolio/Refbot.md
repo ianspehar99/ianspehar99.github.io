@@ -48,7 +48,7 @@ Image processing workflow:
     - If the score is psotive, print with a good message, lights go green
 - Clear all logged heights and wait for next throw
 
-<img src="/images/LCDOUTPUT" alt="Good throw message" style="max-width:400px;">
+<img src="/images/LCDOUTPUT.png" alt="Good throw message" style="max-width:400px;">
 
 
 ### Difficulties
@@ -70,8 +70,8 @@ ROBOTICS IS HARD/ BIG DIFFERENCE BETWEEN SHOWING PROOF OF CONCEPT AND HAVING IT 
 FULL PROCESS GOING FROM SOFTWARETO ELECTRIC TO TESTING AND ACTUALY TRYING TO GET IT WORK IN FRONTOF PEOPLE AND HAVE IT WORK PERFECTLY LESSONS LEARNED FS STORY OF FIRST TIME SHOWING IT TO MY FRIENDS FUNNY HAHA, was npt a smooth launch, needed to play games with freinds for a while to work out, pause game to check frames and logic
 
 
-<img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:400px;">
-<img src="/images/lightsetup" alt="Backlight so the ref can see" style="max-width:400px;">
+<img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:200px;">
+<img src="/images/lightsetup.png" alt="Backlight so the ref can see" style="max-width:200px;">
 
 
 
