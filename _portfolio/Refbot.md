@@ -9,7 +9,7 @@ image: /images/Moneyshot.png
 ### Motivation
 My friends and I love playing this game called "Snaps", where you score points by throwing dice high into the air, so they bounce off a table and hit the ground before the other team can catch them. The issue was that this leads to constant arguments about whether a throw was high enough to be legal. Even after putting up a string for reference, it was still hard to call close ones from below. To remove all subjectivity, and save our friendships, I built RefBot, a robot referee designed to autonomously judge throw height.
 
-!(/images/Secondbest.png)
+![](/images/Secondbest.png)
 
 ### System Overview
 
@@ -85,7 +85,7 @@ How hard/imperfect motion capture/moving object recognition with computer vision
 Learned my lesson to be mindful when following online resources
 
 
-!(/images/Thirdbest.png)
+![](/images/Thirdbest.png)
 
 
 Overall, this was a super rewarding project, combining my passion robotics with solving an actual (extremely minor) problem in my life. It was also really fun surprising my friends with it and getting their reactions. It was so cool to be able to see the impact it had, I have never felt so satisifed with myself after playing for hours and having zero arguments. Any time someone had doubts I could go and check teh frames and show everyone what the robot saw (Fig xxx from above), it was like real life Var in soccer
