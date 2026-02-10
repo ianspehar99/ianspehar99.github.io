@@ -28,14 +28,27 @@ I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller 
 
 **Computer**: Raspberry Pi 4
 
-<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
-  <img src="/images/raw1.png" style="width:90%;" alt="">
-  <img src="/images/raw2.png" style="width:90%;" alt="">
-  <img src="/images/raw3.png" style="width:90%;" alt="">
-  <img src="/images/dbug1.png" style="width:90%;" alt="">
-  <img src="/images/dbug2.png" style="width:90%;" alt="">
-  <img src="/images/dbug3.png" style="width:90%;" alt="">
+<div style="
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+">
+  <img src="/images/raw1.png">
+  <img src="/images/raw2.png">
+  <img src="/images/raw3.png">
+  <img src="/images/dbug1.png">
+  <img src="/images/dbug2.png">
+  <img src="/images/dbug3.png">
 </div>
+
+<style>
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* pick what matches your camera */
+    object-fit: contain;  /* no cropping */
+  }
+</style>
+
 Captured frames from a successful throw, along with the debugging frames that show the contours and their respective centroids 
 
 
