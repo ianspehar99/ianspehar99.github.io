@@ -29,7 +29,11 @@ Camera view
 **Results**: Sequential waypoint navigation worked, with the rover being able to calculate the heading and turn to the next waypoint. Obstacle navigation using LiDAR was also mostly effective and fairly consistent. The proportional following definitely needed some more tuning, and it did have a few failures, but they were rare enough to where it was difficult to recreate the issue for debugging. With more time, it shouldn’t be too hard to iron out any exceptions/bugs. Flag detection using the camera also worked perfectly. 
 
 ### Rover in Action!
-![Rover Sim](/images/Rover Sim.mp4)
+<video width="600" controls>
+  <source src="/images/Rover Sim.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Challenges Faced: 
 Subscribing to Gazebo’s Odometry info caused the simulation rover’s location to drift, so that the GUI did not match up with the reported pose. Unfortunately, I was unable to find documentation on how to convert the absolute simulation pose to ROS. Having noisy measurements like this is technically more accurate, but for testing and debugging original algorithms, it was pretty terrible. The real life rover will also have a Kalman filter, which will make it more accurate. 
