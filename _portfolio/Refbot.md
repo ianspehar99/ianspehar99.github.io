@@ -35,11 +35,7 @@ Computer: Raspberry Pi 4
   <img src="/images/dbug2.png" style="width:100%;" alt="">
   <img src="/images/dbug3.png" style="width:100%;" alt="">
 </div>
-
-
-*Add in pics of the dice and then the contours and the oiunt that we are judging*
-
-* Side by side??? 
+Captured frames from a successful throw, along with the debugging frames that show the contours and their respective centroids 
 
 - Line up camera so that the horizontal height reference line is at the halfway point in the frame. 
 
@@ -85,7 +81,7 @@ This project required a full end-to-end pipeline, from software to electronics t
 
 
 
-Lessons Learned:
+### Lessons Learned
 
 Definitely not the first time ive learned this lesson, but just relearned the importance of focusing on the most basic functionalities tested and working, and then add more complex features after. My brain always wants to do everything at once, but it gets overwhelming and overly complicated very quickly.
 
