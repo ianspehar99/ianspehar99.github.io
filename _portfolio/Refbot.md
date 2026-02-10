@@ -20,7 +20,7 @@ LEGO Technic and duct tape allowed for rapid prototyping without custom parts. T
 
 **Camera**: Logitech USB Webcam (≈30 FPS, ~15 FPS under processing load)
 
-I chose a camera as my sensor over other alternatives such as an multrasonic sensor or LiDAR due to combo of simplicity, speed, and ability to easily cover a large area
+I chose a camera as my sensor over other alternatives such as an ultrasonic sensor or LiDAR due to combo of simplicity, speed, and ability to cover a large area
 
 I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller form factor, but I got tired of dealing with ribbon cable connectivity issues, so I switched to the Logitech webcam I had sitting around.  The webcam was readily available and, with adjustments to account for motion blur, proved sufficient for reliable throw detection.
 
