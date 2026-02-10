@@ -27,7 +27,15 @@ LCD and LED lights: Used to indicate the throw outcome. Green lights for good th
 
 Computer: Raspberry Pi 4
 
-Go into code: 
+<div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
+  <img src="/images/raw1.png" style="width:100%;" alt="">
+  <img src="/images/raw2.png" style="width:100%;" alt="">
+  <img src="/images/raw3.png" style="width:100%;" alt="">
+  <img src="/images/dbug1.png" style="width:100%;" alt="">
+  <img src="/images/dbug2.png" style="width:100%;" alt="">
+  <img src="/images/dbug3.png" style="width:100%;" alt="">
+</div>
+
 
 *Add in pics of the dice and then the contours and the oiunt that we are judging*
 
@@ -53,20 +61,23 @@ Image processing workflow:
 ### Difficulties
 As with any robotics project, especially one where you are bringing it from idea to actually using it for something, there were a lot of difficulties to vercome
 
-**Hardware:** - Pi camera stopped working (used for FPS/small), ordered new one still stopped working, I think my raspberry pi ribbon cable port is broken. Used cheap USB webcam with lower FPS, but was adequate after code adjustments
+**Hardware:** 
 
-**Perception:**
+The Pi camera stopped working (used for FPS/small), ordered new one still stopped working, I think my raspberry pi ribbon cable port is broken. Used cheap USB webcam with lower FPS, but was adequate after code adjustments
 
+**Perception:** 
 
-ALSO LIGHING AND DIFFERENT ENVIRONMENT/COMPUTER VISION IS REALLY HARD AND TEMPERAMENTAL AND SENSITIVE TO DIFFERENT ENVIRONEMTNS, Thresholding
-
+Lighting and environmental variation made computer vision extremely challenging. Small changes in lighting conditions or surroundings significantly affected performance, especially when using techniques like thresholding, which can be highly sensitive to environmental differences. I ended up having to use a backlight and calibrating the computer vision for a certain time of day.
 
 **Integration:**
 
-**Reliability:**
-ROBOTICS IS HARD/ BIG DIFFERENCE BETWEEN SHOWING PROOF OF CONCEPT AND HAVING IT WORK 100% FOR ITS PROPER USE. Also this was a situation where there was some pressure on the line, 
+Integrating perception, software logic, electronics, and physical hardware is always harder than you expect. Each layer may work independently, but combining them into a single functioning system takes a lot of time and testing. 
 
-FULL PROCESS GOING FROM SOFTWARETO ELECTRIC TO TESTING AND ACTUALY TRYING TO GET IT WORK IN FRONTOF PEOPLE AND HAVE IT WORK PERFECTLY LESSONS LEARNED FS STORY OF FIRST TIME SHOWING IT TO MY FRIENDS FUNNY HAHA, was npt a smooth launch, needed to play games with freinds for a while to work out, pause game to check frames and logic
+**Reliability:**
+
+Robotics highlights the large gap between a proof of concept and a system that works reliably in the real world. Getting something to function correctly 100% of the time - especially under pressure and in front of others — is much harder than demonstrating it in a controlled setting.
+
+This project required a full end-to-end pipeline, from software to electronics to testing and live operation. The first public demo in front of friends was far from smooth: debugging involved pausing the game, inspecting camera frames, and adjusting logic on the fly. While frustrating at the time, it provided valuable lessons about real-world deployment, testing under realistic conditions, and the importance of field testing.
 
 
 <img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:200px;">
