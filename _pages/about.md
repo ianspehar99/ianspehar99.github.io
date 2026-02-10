@@ -11,9 +11,9 @@ redirect_from:
 About Me
 =====
 ***
-I am currently pursuing a Master's in Mechanical Engineering at Oregon State University, with a focus on robotics. I’m passionate about using robotic technology to solve real-world problems and create a positive impact, especially in renewable energy and environmental sustainability.
+I am currently pursuing a Master's in Mechanical Engineering at Oregon State University, with a Minor in robotics. I’m passionate about using robotic technology to solve real-world problems and create a positive impact, especially in renewable energy and environmental sustainability.
 
-For my thesis, I am working under Dr. Richard Wirz on integrating robotics and automation into advanced additive manufacturing systems. My work focuses on developing autonomous control and lab automation software for robotic laser directed energy deposition (LDED), along with implementing automated data acquisition pipelines to generate high-quality, low-cost datasets with minimal human intervention. This approach improves experimental precision, reduces operator error, and standardizes data logging to support downstream machine learning model training.
+For my thesis, I am working under Dr. Richard Wirz on integrating robotics and automation into advanced additive manufacturing systems to support plasma containment for fusion power applications. My work focuses on developing autonomous control and lab automation software for robotic laser directed energy deposition (LDED), along with implementing automated data acquisition pipelines to generate high-quality, low-cost datasets with minimal human intervention. This approach improves experimental precision, reduces operator error, and standardizes data logging to train downstream machine learning models. 
 
 I have a broad set of engineering skills, but I mostly love developing software for robot intelligence, finding creative ways to automate and solve complex challenges. I’m currently looking for a robotics job after I complete my M.S. degree this June, where I can apply my skills, learn new things, and make meaningful contributions.
 
