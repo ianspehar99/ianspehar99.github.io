@@ -37,12 +37,11 @@ Computer: Raspberry Pi 4
 </div>
 Captured frames from a successful throw, along with the debugging frames that show the contours and their respective centroids 
 
-- Line up camera so that the horizontal height reference line is at the halfway point in the frame. 
-
-Run camera at max fps (about 15 when code is running) to capture the dice throw
 
 
 Image processing workflow:
+- Line up camera so that the horizontal height reference line is at the halfway point in the frame. 
+- Run camera at max fps (about 15 when code is running) to capture the dice throw
 - Search each frame for white contours (this works becasue of the black backdrop, gets rid of noise)
 - Approximate throw height using the average of the contour’s centroid and the topmost pixel (to find balance between noise from motion blur while also trying to get the highest point the die reached), save height
 - If no contours are found for a certain number of frames in a row, assume the throw has completed, go back and get the max height value
@@ -94,9 +93,11 @@ Learned my lesson to be mindful when following online resources
 ![](/images/Thirdbest.png)
 
 
-Overall, this was a super rewarding project, combining my passion robotics with solving an actual (extremely minor) problem in my life. It was also really fun surprising my friends with it and getting their reactions. It was so cool to be able to see the impact it had, I have never felt so satisifed with myself after playing for hours and having zero arguments. Any time someone had doubts I could go and check teh frames and show everyone what the robot saw (Fig xxx from above), it was like real life Var in soccer
+Overall, this was a highly rewarding project that combined my passion for robotics with solving an actual (extremely minor) problem in my life. It was especially fun to surprise my friends with the system and see their reactions. What stood out most was the real impact it had on the fairness of the game. Whenever there was doubt about a call, I could review the recorded frames and show everyone exactly what the robot saw - essentially a real life version of Video-Assisted Referee technology in soccer.
 
-ALSO HELPED TO ACT AS VAR FOR THE ONES OUT OF FRAME WE COULD ALL LOOK AT THE RAJECTORY AND INTERPOLSTE, MENTION THAT TO SOUND MORE NERDY LESS DRINKY.
+Although the robot occasionally made incorrect decisions due to limitations in frame width, reviewing the frames still allowed us to understand the general trajectory of the dice and overrule decisions when necessary. I have never felt more satisfied with a project than after having played for hours without any arguments, and 100% fair games. 
+
+
 
 
 
