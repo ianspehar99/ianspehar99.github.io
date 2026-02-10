@@ -107,13 +107,13 @@ Learned my lesson to be mindful when following online resources
 ![](/images/Thirdbest.png)
 
 
-Overall, this was a highly rewarding project that combined my passion for robotics with solving an actual (extremely minor) problem in my life. It was especially fun to surprise my friends with the system and see their reactions. What stood out most was the real impact it had on the fairness of the game. Whenever there was doubt about a call, I could review the recorded frames and show everyone exactly what the robot saw - essentially a real life version of Video-Assisted Referee technology in soccer.
+Overall, this was a highly rewarding project that combined my passion for robotics with solving an actual (extremely minor) problem in my life. It was especially fun to surprise my friends with the system and see their reactions. What stood out most was the real impact it had on the fairness of the game. Whenever there was doubt about a call, we could review the recorded frames, showing everyone exactly what the robot saw. This is essentially a version of the Video-Assisted Referee technology that they use in professional soccer.
 
 Although the robot occasionally made incorrect decisions due to limitations in frame width, reviewing the frames still allowed us to understand the general trajectory of the dice and overrule decisions when necessary. I have never felt more satisfied with a project than after having played for hours without any arguments, and 100% fair games. 
 
 
 
-Idea: ArUco pattern???
+<!-- Idea: ArUco pattern??? -->
 
 
 ## Code
