@@ -38,14 +38,6 @@ I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller 
 </div>
 
 
-<style>
-  img {
-    width: 100%;
-    aspect-ratio: 4 / 3;   /* pick what matches your camera */
-    object-fit: contain;  /* no cropping */
-  }
-</style>
-
 Captured frames from a successful throw, along with the debugging frames that show the contours and their respective centroids 
 
 
