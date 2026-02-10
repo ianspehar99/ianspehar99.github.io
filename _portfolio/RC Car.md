@@ -1,7 +1,7 @@
 ---
 title: "Custom RC Car"
 excerpt: "Remote control car project"
-order: 3
+order: 4
 collection: portfolio
 image: /images/CAR.png
 ---

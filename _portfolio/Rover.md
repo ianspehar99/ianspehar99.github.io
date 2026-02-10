@@ -14,12 +14,15 @@ I built a custom ROS2 - Gazebo simulation pipeline for an autonomous rover that 
 ### System Description:
 
 
-**Waypoint navigation**: The navigation node iterates through a list of waypoints as it reaches each one, calculating the new heading each time and steering the rover in the new direction.
-
 ![Rover Sim](/images/diagram.png)
 ROS2 node diagram for the system showing workflow and topics published and received
 
+
+**Waypoint navigation**: The navigation node iterates through a list of waypoints as it reaches each one, calculating the new heading each time and steering the rover in the new direction.
+
 **Obstacle avoidance**: The main navigation node subscribes to the LiDAR scan, and the current pose to get around obstacles. When the front-facing scan readout is below 2.5 meters, the robot stops, turns 90 degrees to the right, and enters “bug mode” to go around the obstacle. It then starts tracking the left-side LiDAR scan distance, turning proportionally to the changes in that reading from the initial stopping distance, to try and stay hugging the wall of the obstacle. If 15 out of the last 20 left-side scans are equal to the max range, the rover assumes that there was a corner to the obstacle that was unable to be followed by the proportional steering, and that it needs to turn 90 degrees to the left. The rover continues this loop until it is back on the m-line, meaning it is once again on the same vector (starting point  > current goal waypoint) as it was before it encountered the obstacle. It then exits bug mode, recalculates a new heading towards the waypoint, and continues this process until the flag is found.
+
+![Rover Sim](/images/bugmode.png)
 
 **Flag Detection**: This was done by using CV2 contouring on the Gazebo RGB camera outputs, looking for sufficiently large red objects in the frame that would indicate that the flag is ahead. If a flag was seen in 4 out of the last 5 images, it sends a message to the main nav node to stop the rover because the flag has been found. 
 
