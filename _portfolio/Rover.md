@@ -38,7 +38,7 @@ Camera view
 ## Challenges Faced: 
 Subscribing to Gazebo’s Odometry info caused the simulation rover’s location to drift, so that the GUI did not match up with the reported pose. Unfortunately, I was unable to find documentation on how to convert the absolute simulation pose to ROS. Having noisy measurements like this is technically more accurate, but for testing and debugging original algorithms, it was pretty terrible. The real life rover will also have a Kalman filter, which will make it more accurate. 
 
-I could not get the Gazebo LiDAR sensor implementation to work at all, even when trying the example code on Gazebo’s website, so I ended up having to fake it. I did this using a separate node which took in the locations of the rover and the simulated obstacles as inputs, and published LaserScan messages that mimicked what a working LiDAR would be able to see. 
+I could not get the Gazebo LiDAR sensor implementation to work at all, even when trying the example code on Gazebo’s website, so I ended up having to fake it. I did this using a separate node which took in the locations of the rover and the simulated obstacles as inputs, and published LaserScan messages that mimicked what a working LiDAR would be able to see from the robot's current position.
 
 
 ### Lessons Learned: 

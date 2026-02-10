@@ -109,6 +109,19 @@
   border-bottom-color: #0b5ed7; /* Hover effect */
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* Responsive styling */
 @media (max-width: 768px) {
   .portfolio-grid {

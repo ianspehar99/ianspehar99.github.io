@@ -28,18 +28,15 @@ I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller 
 
 **Computer**: Raspberry Pi 4
 
-<div style="
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-">
-  <img src="/images/raw1.png">
-  <img src="/images/raw2.png">
-  <img src="/images/raw3.png">
-  <img src="/images/dbug1.png">
-  <img src="/images/dbug2.png">
-  <img src="/images/dbug3.png">
+<div class="grid">
+  <img src="/images/raw1.png" alt="">
+  <img src="/images/raw2.png" alt="">
+  <img src="/images/raw3.png" alt="">
+  <img src="/images/dbug1.png" alt="">
+  <img src="/images/dbug2.png" alt="">
+  <img src="/images/dbug3.png" alt="">
 </div>
+
 
 <style>
   img {
