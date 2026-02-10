@@ -103,4 +103,4 @@ Although the robot occasionally made incorrect decisions due to limitations in f
 
 
 ## Code
-Check out the [GitHub repo for this project](https://github.com/ianspehar99/ROB599_Rover_Search_Project).
+Check out the [GitHub repo for this project](https://github.com/ianspehar99/RefBot).
