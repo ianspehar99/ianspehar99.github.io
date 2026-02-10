@@ -7,7 +7,7 @@ image: /images/Moneyshot.png
 ---
 
 ### Motivation
-My friends and I love playing this game called "Snaps", where you score points by throwing dice high into the air, so they bounce off a table and hit the ground before the other team can catch them. The issue was that this leads to constant arguments about whether a throw was high enough to be legal. Even after putting up a string for reference, it was still hard to call close ones from below. To remove all subjectivity, and save our friendships, I built RefBot, a robot referee designed to autonomously judge throw height.
+My friends and I love playing this game called "Snaps", where you score points by throwing dice high into the air so that they bounce off a table and hit the ground before the other team can catch them. The issue was that this leads to constant arguments about whether a throw was high enough to be legal. Even after putting up a string for reference, it was still hard to judge throws accurately from below. To remove all subjectivity, and save our friendships, I built RefBot, a robot referee designed to autonomously judge throw height.
 
 <img src="/images/Moneyshot.png" alt="Another view of RC Car" style="max-width:400px;">
 
