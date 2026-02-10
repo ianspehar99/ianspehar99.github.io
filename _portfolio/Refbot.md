@@ -16,22 +16,21 @@ My friends and I love playing this game called "Snaps", where you score points b
 RefBot uses a fixed camera to track the vertical position of a thrown die relative to a predefined reference line in the camera frame. A Raspberry Pi processes video frames in real time, determines the maximum height reached during a throw, and provides immediate feedback through an LCD screen and RGB LEDs.
 
 **Frame**: Built using LEGO Technic parts and duct tape
-LEGO Technic and duct tape allowed for rapid prototyping without custom parts. The components are cheap, reusable across projects, and surprisingly strong, which made it easy to iterate on the design while focusing primarily on software and electronics instead of committing to 3D printing
+LEGO Technic and duct tape allowed for rapid prototyping without custom parts. The components are cheap, reusable across projects, and surprisingly strong. They also made it easy to iterate on the design instead of committing to 3D printing, allowing me to focus primarily on software and electronics 
 
 **Camera**: Logitech USB Webcam (≈30 FPS, ~15 FPS under processing load)
-I chose a camera as my sensor over other alternatives such as an multrasonic sensor or LiDar due to combo of simplicity, speed, and ability to easily cover a large area.
+I chose a camera as my sensor over other alternatives such as an multrasonic sensor or LiDAR due to combo of simplicity, speed, and ability to easily cover a large area
 
 I initially planned to use a Raspberry Pi Camera for its higher FPS and smaller form factor, but I got tired of dealing with ribbon cable connectivity issues, so I switched to the Logitech webcam I had sitting around.  The webcam was readily available and, with adjustments to account for motion blur, proved sufficient for reliable throw detection.
 
-LCD and LED lights: Used to indicate the throw outcome. Green lights for bad throw, 
+LCD and LED lights: Used to indicate the throw outcome. Green lights for good throw, red for bad
 
 Computer: Raspberry Pi 4
 
 Go into code: 
 
 *Add in pics of the dice and then the contours and the oiunt that we are judging*
-<img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;">
-<img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;">
+
 * Side by side??? 
 
 - Line up camera so that the horizontal height reference line is at the halfway point in the frame. 
