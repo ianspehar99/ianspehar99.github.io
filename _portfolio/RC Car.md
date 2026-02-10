@@ -16,7 +16,7 @@ mechanism using Legos and duct tape
 
 <img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;">
 
-Includes automated controller pairing and startup, crash deterrence, and custom maneuvers such a parallel parking and turns.
+Includes automated controller pairing and startup, crash deterrence, and custom maneuvers such as parallel parking and turns.
 
 
 ## Code
