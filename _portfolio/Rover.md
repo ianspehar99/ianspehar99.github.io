@@ -1,9 +1,9 @@
 ---
-title: "Mars Rover Auto-Nav Simulation"
+title: "Mars Rover Autonomous Navigation"
 excerpt: "Mars Rover Team R&D Project With ROS2 and Gazebo "
 order: 2
 collection: portfolio
-image: /images/Rover.png
+image: /images/Rover.pngw
 ---
 
 I built a custom ROS2 - Gazebo simulation pipeline for an autonomous rover that searches a cluttered 10 m-radius environment to find a colored flag. I wrote my own navigation node and Bug-based obstacle avoidance algorithm, using proportional control to steer around obstacles, along with a waypoint-driven search pattern. The rover uses Gazebo odometry for localization, LiDAR for obstacle avoidance, and an RGB camera for flag detection. This was an R&D project with the OSU Mars Rover Team to prepare for the autonomous search phase of competitions. 

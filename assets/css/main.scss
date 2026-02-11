@@ -121,6 +121,11 @@
   display: block;
 }
 
+.grid img.bigger {
+  transform: scale(1.1); /* slightly bigger */
+  z-index: 1;
+}
+
 
 /* Responsive styling */
 @media (max-width: 768px) {
