@@ -115,17 +115,16 @@
   gap: 10px;
 }
 
-.grid img {
+.cell {
+  aspect-ratio: 4 / 3;   /* change if needed */
+  overflow: hidden;
+}
+
+.cell img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;     /* or contain */
 }
-
-.grid img.bigger {
-  transform: scale(1.1); /* slightly bigger */
-  z-index: 1;
-}
-
 
 /* Responsive styling */
 @media (max-width: 768px) {
