@@ -73,7 +73,7 @@ Integrating perception, software logic, electronics, and physical hardware is al
 
 **Reliability:**
 
-Robotics highlights the large gap between a proof of concept and a system that works reliably in the real world. Getting something to function correctly 100% of the time - especially under pressure and in front of others — is much harder than demonstrating it in a controlled setting.
+Robotics highlights the large gap between a proof of concept and a system that works reliably in the real world. Getting something to function correctly 100% of the time - especially under pressure and in front of others - is much harder than demonstrating it in a controlled setting.
 
 This project required a full end-to-end pipeline, from software to electronics to testing and live operation. The first public demo in front of friends was far from smooth: debugging involved pausing the game, inspecting camera frames, and adjusting logic on the fly. While frustrating at the time, it provided valuable lessons about real-world deployment, testing under realistic conditions, and the importance of field testing.
 
@@ -98,7 +98,7 @@ Learned my lesson to be mindful when following online resources
 
 Overall, this was a highly rewarding project that combined my passion for robotics with solving an actual (extremely minor) problem in my life. It was especially fun to surprise my friends with the system and see their reactions. What stood out most was the real impact it had on the fairness of the game. Whenever there was doubt about a call, we could review the recorded frames, showing everyone exactly what the robot saw. This is essentially a version of the Video-Assisted Referee technology that they use in professional soccer.
 
-Although the robot occasionally made incorrect decisions due to limitations in frame width, reviewing the frames still allowed us to understand the general trajectory of the dice and overrule decisions when necessary. I have never felt more satisfied with a project than after having played for hours without any arguments, and 100% fair games. 
+Although the robot occasionally made incorrect decisions due to limitations in frame width, reviewing the frames still allowed us to understand the general trajectory of the dice and overrule decisions when necessary. I have never felt more satisfied with a project than after having played for hours without any arguments, and 100% fair games.
 
 
 
