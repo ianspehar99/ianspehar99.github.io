@@ -85,13 +85,10 @@ This project required a full end-to-end pipeline, from software to electronics t
 
 ### Lessons Learned
 
-Definitely not the first time ive learned this lesson, but just relearned the importance of focusing on the most basic functionalities tested and working, and then add more complex features after. My brain always wants to do everything at once, but it gets overwhelming and overly complicated very quickly.
+This is definitely not the first time ive learned this lesson, but just relearned the importance of focusing on the most basic functionalities tested and working, and then add more complex features after. My brain always wants to do everything at once, but it gets overwhelming and overly complicated very quickly.
 
 
-How hard/imperfect motion capture/moving object recognition with computer vision is. Do every thing you can to simplify set up your environemtn for success if possible (black canvas in the background, backlighting)
-
-Learned my lesson to be mindful when following online resources
-
+I learned how hard/imperfect motion capture/moving object recognition with computer vision is. It is very important to do everything you can to simplify and set up your environment for success(black canvas in the background, backlighting)
 
 ![](/images/Thirdbest.png)
 
