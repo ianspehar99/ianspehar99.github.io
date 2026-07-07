@@ -3,10 +3,11 @@ title: "SCAPE: Automated Process Control for Laser DED Additive Manufacturing"
 excerpt: "M.S. thesis on synchronized process control for robotic metal additive manufacturing"
 order: 1
 collection: portfolio
-image: /images/thesis/kukameltio.png
+image: /images/thesis/SCAPE pic.png
 ---
 
-**SCAPE** (Scheduled Control for Automated Parameter Execution) is the software framework I developed for my M.S. thesis to automate synchronized process control on a KUKA–Meltio Laser Directed Energy Deposition (LDED) system. Because the hardware could not natively coordinate robot motion with laser parameter changes, I designed a scheduling and synchronization framework that executes parameter updates at precise physical locations during printing. The system enables automated generation of high-quality, machine-learning-ready datasets for additive manufacturing research.
+**SCAPE** (Scheduled Control for Automated Parameter Execution) is the software framework I developed for my M.S. thesis to automate synchronized process control on a KUKA–Meltio Laser Directed Energy Deposition (LDED) system. Because the hardware could not natively coordinate robot motion with laser power and wire feed rate changes, I designed a scheduling and synchronization framework that executes parameter updates at precise physical locations during printing. The system enables automated generation of high-quality, machine-learning-ready datasets for additive manufacturing research.
+
 
 <img src="/images/thesis/kukameltio.png" alt="KUKA-Meltio LDED system" style="max-width:700px;">
 
@@ -26,39 +27,41 @@ image: /images/thesis/kukameltio.png
 
 ## Results & Validation
 
+## Results & Validation
+
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center" width="50%">
 
 <img src="/images/thesis/map.png" alt="Parameter Map" style="max-width:100%;">
 
-**1. Planned Parameter Schedule**
+1. Planned Parameter Schedule
 
 Generated synchronized parameter maps defining where laser power and feed rate changes should occur during printing.
 
 </td>
 
-<td align="center" width="33%">
+<td align="center" width="50%">
 
 <img src="/images/thesis/print.png" alt="Printed Part" style="max-width:100%;">
 
-**2. Manufactured Part**
+2. Resulting Print
 
-SCAPE executed parameter changes at the intended locations, producing visible geometric differences along the toolpath.
-
-</td>
-
-<td align="center" width="33%">
-
-<img src="/images/thesis/topo.png" alt="Topography Validation" style="max-width:100%;">
-
-**3. Experimental Validation**
-
-3D surface scans confirmed that the resulting geometry matched the planned parameter schedule, validating synchronization accuracy.
+SCAPE executed parameter changes at the intended locations, producing visible geometric differences along the print pattern.
 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+<img src="/images/thesis/topo.png" alt="Topography Validation" style="max-width:850px; width:100%;">
+
+3. Experimental Validation
+
+3D surface scans confirmed that the resulting geometry matched the planned parameter schedule, validating synchronization accuracy.
+
+</div>
 
 ## Impact
 

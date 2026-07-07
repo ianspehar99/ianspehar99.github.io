@@ -1,81 +1,83 @@
 ---
-title: "Autonomous Rover Navigation for Search & Rescue Competitions"
-excerpt: "ROS2-based autonomous rover with custom obstacle avoidance and vision-based target detection"
+title: "Autonomous Rover Navigation for Search & Rescue"
+excerpt: "ROS2 autonomous navigation system with obstacle avoidance and vision-based target detection"
 order: 2
 collection: portfolio
 image: /images/Rover.png
 ---
 
-Developed a ROS2-Gazebo simulation pipeline for an autonomous rover capable of navigating cluttered environments and detecting colored targets. Implemented custom navigation algorithms including a Bug-based obstacle avoidance strategy and vision-based flag detection using OpenCV contouring. The system was developed as an R&D project for the OSU Mars Rover Team to prepare for the autonomous search phase of international competitions.
+This project was developed as an R&D effort for the Oregon State University Mars Rover Team to support the autonomous search phase of international rover competitions. I designed a modular ROS2 software stack that enables a simulated rover to autonomously navigate cluttered environments, avoid obstacles using LiDAR, and detect colored targets through computer vision. The project emphasized robust autonomous behavior, modular software architecture, and realistic simulation-based testing in Gazebo.
 
-![Rover Sim](/images/sim_sc.png)
+<img src="/images/sim_sc.png" alt="Gazebo rover simulation" style="max-width:700px;">
 
-### Key Contributions:
-- **Architected** a modular ROS2 system with three primary nodes: navigation, obstacle avoidance, and vision detection
-- **Designed and implemented** a Bug-based obstacle avoidance algorithm using LiDAR data
-- **Developed** vision-based flag detection using OpenCV contouring with temporal confirmation
-- **Created** a custom LiDAR simulation workaround when the Gazebo sensor implementation proved non-functional
-- **Integrated** waypoint-driven search patterns with dynamic obstacle response
+## Highlights
 
-### Technologies:
-ROS2 · Python · Gazebo · LiDAR · OpenCV · Odometry · Bug Algorithm · Proportional Control · Contour Detection
+- Designed a modular ROS2 architecture consisting of independent navigation, obstacle avoidance, and vision nodes
+- Implemented a Bug-based obstacle avoidance algorithm using LiDAR and proportional wall-following control
+- Developed an OpenCV vision pipeline for autonomous flag detection with temporal filtering to eliminate false positives
+- Created a custom LiDAR simulation node after limitations were discovered in the native Gazebo sensor implementation
+- Integrated waypoint navigation, obstacle avoidance, and vision into a complete autonomous search pipeline
 
-### System Architecture:
+## Technical Stack
 
-![Rover Sim](/images/diagram.png)
-ROS2 node diagram for the system showing workflow and topics published and received
+**Software:** ROS2 · Python · OpenCV · Gazebo  
+**Algorithms:** Bug Navigation · Proportional Control · Waypoint Navigation  
+**Sensors:** Simulated LiDAR · RGB Camera · Odometry
 
-**Navigation Pipeline**: The main navigation node iterates through predefined waypoints, calculating headings and steering the rover using proportional control. The system continuously monitors LiDAR data to detect obstacles while progressing toward the current target waypoint.
+## System Overview
 
-**Obstacle Avoidance**: Implemented a Bug-based navigation algorithm using LiDAR data. The rover transitions into wall-following behavior when obstacles are detected, maintains a target clearance using proportional control, and rejoins the original waypoint trajectory once line-of-sight is restored.
+<img src="/images/diagram.png" alt="ROS2 node architecture" style="max-width:700px;">
 
-![Bug Algorithm](/images/bugmode.png)
+The system is organized into three primary ROS2 nodes:
 
-**Vision-Based Detection**: An OpenCV pipeline processes Gazebo RGB camera outputs, applying contouring to identify sufficiently large red objects. Detection requires 4 out of 5 consecutive positive frames to reduce false positives before signaling the navigation node to stop.
+- **Navigation:** Drives the rover through predefined waypoints using proportional heading control while monitoring obstacle and vision data.
+- **Obstacle Avoidance:** Implements a Bug-style navigation algorithm that transitions into wall following when obstacles are detected and returns to the planned path once a clear route is available.
+- **Vision:** Processes RGB camera images with OpenCV contour detection to identify red flags. A temporal confirmation filter requiring 4 of the previous 5 frames prevents false detections before signaling the navigation node.
 
-![Rover Sim](/images/flagcam.png)
-Camera view
+<table>
+<tr>
+<td align="center" width="50%">
 
-### Simulation Validation:
+<img src="/images/bugmode.png" alt="Bug algorithm visualization" style="max-width:100%;">
 
-Rover in Action!
-<video width="600" controls>
+**Bug-Based Navigation**
+
+LiDAR-based obstacle avoidance with wall-following behavior.
+
+</td>
+
+<td align="center" width="50%">
+
+<img src="/images/flagcam.png" alt="Flag detection" style="max-width:100%;">
+
+**Vision Detection**
+
+OpenCV contour detection with temporal confirmation.
+
+</td>
+</tr>
+</table>
+
+## Results & Validation
+
+The complete system was validated in Gazebo simulation through repeated autonomous navigation trials.
+
+- Successfully navigated multi-waypoint search paths with proportional heading control
+- Reliably avoided static obstacles using Bug-based navigation
+- Achieved 100% flag detection accuracy during testing without observed false positives
+- Verified communication between all ROS2 nodes using asynchronous topic-based messaging
+
+<video width="700" controls>
   <source src="/images/Rover Sim.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-The system was validated entirely in Gazebo simulation due to hardware availability constraints. Sequential waypoint navigation performed reliably, with the rover successfully calculating headings and executing turns. The Bug-based obstacle avoidance demonstrated consistent effectiveness, with failures rare enough to impede comprehensive debugging.
+## Impact
 
-### Results:
-- **Waypoint navigation**: Successfully executed multi-waypoint paths with accurate heading calculations
-- **Obstacle avoidance**: Bug algorithm effectively navigated around obstacles in most scenarios
-- **Flag detection**: Achieved 100% detection accuracy with no false positives using temporal confirmation
-- **System integration**: All ROS2 nodes successfully communicated through the defined topic architecture
-
-### Challenges & Solutions:
-
-| Challenge | Solution |
-|-----------|----------|
-| Gazebo odometry drift between simulation and published pose | Documented as realistic sensor noise; future implementation will include Kalman filter for improved state estimation |
-| Non-functional Gazebo LiDAR sensor | Developed custom LiDAR simulation node that publishes LaserScan messages based on obstacle locations relative to rover pose |
-| Difficult-to-reproduce rare failures in Bug algorithm | Acknowledged limitation; further tuning required for edge-case handling |
-
-### Lessons Learned:
-- **Asynchronous control design**: Autonomous navigation in ROS2 requires careful state management with flags and non-blocking loops to prevent code stalling
-- **Early simulation integration**: Establishing Gazebo-ROS2 communication and sensor validation should be the first step in future projects
-- **Modular architecture**: Breaking functionality into separate nodes with independent testing dramatically simplified debugging
-- **Diminishing returns**: Once a system achieves near-perfect performance, edge-case failures become exponentially harder to reproduce and debug
-
-[Keep your video]
-
-
-
-<!-- <img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;"> -->
-<!-- ADD IN SOME DETAILS FOR THE ROBOTICISTS, CHALLENGES SUCH AS LIDAR WORKAROUND, HOW I DID THE LIDAR / BUG ALGORITHM THE PEOPLE LOOKING AT THIS ARE GOING TO WANT TO SEE SOME TECHNICAL SHIT AND YOULL BE LIT 
-
-+ ADD IN ROS FLEX THAT SHIT BOYYY ROS2 BABY-->
-
-
+This project demonstrates the integration of perception, planning, and control into a complete autonomous robotic system. Beyond implementing individual algorithms, the work focused on designing a modular ROS2 architecture capable of coordinating multiple sensing and decision-making components. The resulting framework provides a foundation for future development on physical rover hardware and more advanced autonomous search behaviors.
 
 ## Code
-Check out the [GitHub repo for this project](https://github.com/ianspehar99/ROB599_Rover_Search_Project).
+
+Source code and documentation are available on GitHub:
+
+https://github.com/ianspehar99/ROB599_Rover_Search_Project

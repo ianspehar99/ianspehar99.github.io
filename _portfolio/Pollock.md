@@ -1,75 +1,80 @@
 ---
 title: "Pollock: The Painting Robot"
-excerpt: "Kinova robot arm that turns input images into paintings"
+excerpt: "Computer vision pipeline that transforms images into robotic paintings"
 order: 4
 collection: portfolio
 image: /images/pollockms.png
 ---
 
-Developed the core algorithm for an autonomous painting robot that analyzes input images and translates them into artistic interpretations using a Kinova robot arm. The system processes visual data through contour detection and path planning to generate sequential brush stroke commands, producing physical paintings resembling the original source images.
+Pollock is a robotic painting system that transforms input images into physical artwork using a Kinova robotic arm. I developed the complete image-to-command pipeline, converting photographs into sequential brush strokes through computer vision, contour extraction, and path planning. The project demonstrates the integration of perception, motion planning, and robotics to produce artistic interpretations of source images.
 
-### Key Contributions:
-- **Designed and implemented** the complete image-to-command pipeline for robotic painting
-- **Developed** contour detection and point grouping algorithms for image simplification
-- **Created** advanced pathing logic for sequenced brush stroke generation
-- **Integrated** brush stroke command generation for Kinova robot execution
+<img src="/images/pollockms.png" alt="Pollock Painting Robot" style="max-width:700px;">
 
-### Technologies:
-Python · OpenCV · Kinova Robotics · Computer Vision · K-Means Clustering · Path Planning · Image Processing · Robotics · Brush Stroke Generation
+## Highlights
 
-### System Architecture:
+- Designed and implemented the complete image-to-command pipeline for robotic painting
+- Developed computer vision algorithms for contour extraction and image simplification
+- Created path planning algorithm to generate brush stroke sequences
+- Generated robot-compatible motion commands for autonomous painting with a Kinova robotic arm
+- Optimized stroke ordering to improve painting efficiency while preserving image features
 
-**Image Processing Pipeline**:
-1. Input image is loaded and preprocessed for contour detection
-2. OpenCV contour detection identifies shape boundaries and regions
-3. Contours are condensed into representative points for stroke generation
-4. Advanced pathing logic determines the optimal sequence of strokes
-5. Brush stroke commands are generated and formatted for the Kinova robot
+## Technical Stack
 
-**Command Generation**: The system translates visual features into robotic motion commands, determining:
-- Stroke start and end positions
-- Stroke direction and curvature
-- Brush pressure and paint application timing
-- Stroke order for visual coherence
+**Software:** Python · OpenCV · Image Processing  
+**Hardware:** Kinova Robotic Arm  
+**Methods:** Computer Vision · Contour Detection · K-Means Clustering · Path Planning
 
-### Key Features:
+## Results & Validation
 
-**Contour-Based Interpretation**: Images are processed by identifying meaningful contours that capture the essence of the subject, condensing them into a manageable set of points for robotic execution.
+<div align="center">
 
-**Intelligent Path Planning**: The algorithm sequences brush strokes to create a coherent painting, optimizing the order of strokes to minimize robot repositioning while maintaining artistic integrity.
+<img src="/images/horse/oghorse.png" alt="Original Horse Drawing" style="max-width:700px; width:100%;">
 
-**Artistic Translation**: The system balances faithful representation with artistic interpretation, producing paintings that recognize the subject while embracing the robotic aesthetic.
+**1. Source Image**
 
-### Results:
+The system begins with an input image that is processed into representative visual features for robotic reproduction.
 
-The system successfully generates paintings that:
-- **Recognizably depict** the original source images
-- **Demonstrate** coherent artistic composition
-- **Showcase** the robot's ability to translate visual data into physical art
-- **Produce** consistent results across varied input images
+<br><br>
 
-[Keep your before/after images showing source images and resulting paintings]
+<img src="/images/horse/kmeans.png" alt="K-Means Clustering" style="max-width:700px; width:100%;">
 
-**Example Outputs**:
-- [Your horse images - keep them, they're great evidence!]
-- Source: scuffedhorse.png → Final painting showing contour-based interpretation
-- K-means processing for color segmentation and stroke planning
+**2. Image Segmentation**
 
-### Challenges & Solutions:
+K-means clustering simplifies the image into representative regions, reducing visual complexity while preserving important features for stroke generation.
 
-| Challenge | Solution |
-|-----------|----------|
-| Converting image data to robotic motion | Implemented contour detection and point condensation pipeline |
-| Stroke sequencing for coherent art | Developed advanced pathing logic with visual coherence optimization |
-| Balancing representation with interpretation | Designed artistic translation parameters allowing adjustable abstraction levels depending on brush and canvas size|
+<br><br>
 
-### Future Improvements:
+<img src="/images/horse/bonitohorse.png" alt="Full Resolution Path" style="max-width:700px; width:100%;">
 
-- **Color processing**: Implementing color segmentation for multi-color paintings
-- **Stroke variation**: Adding brush width, pressure, and angle variation
-- **Layered painting**: Supporting multiple passes for depth and texture
+**3. High-Resolution Stroke Planning**
 
-### Code:
-[GitHub repository link - add if available]
+The path planning algorithm generated detailed robot trajectories using all extracted points, producing the highest-fidelity digital reconstruction of the horse image.
 
-[Keep your demo images and videos]
+<br><br>
+
+<img src="/images/horse/scuffedhorse.png" alt="Reduced Resolution Path" style="max-width:700px; width:100%;">
+
+**4. Hardware-Aware Path Simplification**
+
+Because the physical brush width limited achievable detail, the stroke sequence was reduced by sampling fewer points. This produced a lower-resolution trajectory better suited for physical execution.
+
+<br><br>
+
+<img src="/images/horse/final.png" alt="Final Robotic Painting" style="max-width:700px; width:100%;">
+
+**5. Robotic Execution**
+
+The simplified trajectory was executed by the Kinova robot arm, producing a physical painting that preserved the major visual features of the original image.
+
+</div>
+
+
+## Impact
+
+Pollock demonstrates the integration of computer vision, path planning, and robotic manipulation into a complete autonomous painting system. The project explores how visual information can be transformed into executable robot trajectories while balancing image fidelity with the physical limitations of the robotic end effector. By bridging perception, motion planning, and physical execution, the framework provides a foundation for future applications in robotic drawing, automated art generation, and creative manufacturing.
+
+## Code
+
+Source code and documentation are available on GitHub:
+
+https://github.com/ianspehar99/Pollock

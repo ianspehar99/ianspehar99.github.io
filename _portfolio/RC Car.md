@@ -1,78 +1,71 @@
 ---
 title: "Custom RC Car"
-excerpt: "Custom-built RC car with automated maneuvers and crash prevention"
+excerpt: "Embedded mechatronics platform with autonomous maneuvers and collision avoidance"
 order: 5
 collection: portfolio
 image: /images/CAR.png
 ---
 
-Designed, built, and programmed a fully custom remote control car from scratch, including all software, electrical circuitry, mechanical chassis, and steering mechanism. Implemented an embedded control system with automated controller pairing, obstacle detection, and programmable maneuvers including parallel parking and precision turns. The project demonstrates end-to-end mechatronics capability from hardware design through embedded software development.
+This project involved designing and building a fully custom remote-controlled vehicle from the ground up, including the mechanical chassis, electrical system, and embedded control software. Powered by a Raspberry Pi, the vehicle supports wireless controller pairing, programmable autonomous maneuvers, and obstacle detection for collision prevention. The project combined mechatronics design with the integration of hardware and embedded software into a complete robotic system.
 
-![RC Car](/images/CAR.png)
+<img src="/images/CAR.png" alt="Custom RC Car" style="max-width:700px;">
 
-### Key Contributions:
-- **Designed and assembled** complete electrical circuit including motor drivers, sensors, and microcontroller
-- **Built** mechanical chassis and steering mechanism using LEGO Technic and rapid prototyping materials
-- **Developed** embedded Python software for motor control, sensor processing, and user input handling
-- **Implemented** automated controller pairing and startup sequence
-- **Created** custom maneuver library including parallel parking and precision turning routines
-- **Integrated** crash deterrence system for obstacle avoidance
+## Highlights
 
-### Technologies:
-Python · Embedded Systems · Raspberry Pi · Motor Control · Mechatronics · Hardware Design · Rapid Prototyping
+- Designed and assembled the complete electrical and mechanical system from scratch
+- Developed embedded Python software for motor control, steering, and controller input
+- Implemented automatic controller pairing and system initialization
+- Created programmable maneuver routines including parallel parking and precision turns
+- Integrated obstacle detection for collision prevention during operation
 
-### System Architecture:
+## Technical Stack
 
-**Hardware Components**:
-- Raspberry Pi 4 for system control and processing
-- Motor drivers for precise speed and steering control
-- Input receiver for wireless controller communication
-- LEGO Technic chassis enabling rapid prototyping and design iteration
-- Duct tape construction for quick mechanical assembly
+**Software:** Python · Embedded Programming · Motor Control  
+**Hardware:** Raspberry Pi 4 · DC Motors · Motor Drivers · LEGO Technic Chassis  
+**Methods:** Mechatronics · Embedded Systems · Rapid Prototyping
 
-**Software Architecture**:
-- Embedded python control loop running on Raspberry Pi
-- Input processing pipeline for controller command interpretation
-- Motor control algorithms for speed and steering actuation
-- Maneuver library with pre-programmed action sequences
-- Automated system initialization and controller pairing sequence
+## Results & Validation
 
-### Key Features:
+<table>
+<tr>
+<td align="center" width="50%">
 
-**Automated Operation**: System boots and automatically pairs with the controller, eliminating manual setup steps and enabling immediate operation.
+<img src="/images/CAR.png" alt="RC Car" style="max-width:100%;">
 
-**Crash Deterrence**: Integrated obstacle detection prevents collisions during manual or autonomous operation.
+**1. Custom Robotic Platform**
 
-**Custom Maneuvers**: Programmed routines enable complex actions:
-- Parallel parking with precision steering control
-- Custom turn sequences with specified radii and durations
-- Repeatable maneuver execution for testing and demonstration
+Designed and assembled the complete vehicle, integrating the chassis, drivetrain, electronics, and embedded controller into a functional robotic platform.
 
-### Hardware Design:
+</td>
 
-The vehicle chassis was rapidly prototyped using LEGO Technic components, enabling mechanical iteration without custom fabrication. This approach allowed for quick adjustments to steering geometry and component placement. The electrical system was assembled and integrated with the mechanical platform, with all connections secured for reliable operation.
+<td align="center" width="50%">
 
-<img src="/images/car2.png" alt="Another view of RC Car" style="max-width:400px;">
+<img src="/images/car2.png" alt="RC Car Side View" style="max-width:100%;">
 
-**Design Advantages**:
-- Rapid iteration without 3D printing or machining
-- Reusable components across multiple projects
-- Simple mechanical adjustments during development
+**2. Integrated Hardware Design**
 
-### Results:
+Rapid prototyping with LEGO Technic enabled iterative refinement of steering geometry, component placement, and drivetrain layout throughout development.
 
-The RC car successfully operates with:
-- **Reliable wireless control** at practical operating ranges
-- **Consistent automated pairing** on every startup
-- **Accurate maneuver execution** including parallel parking sequences
-- **Effective crash prevention** through integrated detection
+</td>
+</tr>
+</table>
 
-### Lessons Learned:
+<div align="center">
 
-- **Hardware-software integration**: Combining electrical, mechanical, and software systems requires careful coordination and testing
-- **Rapid prototyping value**: LEGO-based construction enabled mechanical design iterations that would have been time-prohibitive with custom parts
-- **Embedded system debugging**: Testing control logic requires structured approaches including serial output and LED indicators
-- **Motor control complexity**: Precise speed and steering control requires tuning and calibration for consistent performance
+<img src="/images/CAR.png" alt="Embedded Control System" style="max-width:850px; width:100%;">
 
-### Code:
-[GitHub repository link](https://github.com/ianspehar99/RC-Car)
+**3. Embedded Control Architecture**
+
+The embedded software managed wireless controller communication, motor control, obstacle detection, and programmable maneuver execution through a unified control loop.
+
+</div>
+
+## Impact
+
+This project demonstrates complete mechatronic system development, from hardware construction and electrical integration to software implementation. By combining mechanical design, electronics, and control algorithms into a single platform, the project provided practical experience developing reliable robotic systems. 
+
+## Code
+
+Source code and documentation are available on GitHub:
+
+https://github.com/ianspehar99/RC-Car

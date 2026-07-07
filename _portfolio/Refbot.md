@@ -1,44 +1,59 @@
 ---
-title: "RefBot: Robot Video-Assisted Referee for Precision Throw Judging"
-excerpt: "Real-time computer vision system for throw height verification"
+title: "RefBot: Video-Assisted Referee for Precision Throw Judging"
+excerpt: "Real-time computer vision system for autonomous throw height verification"
 order: 3
 collection: portfolio
 image: /images/Moneyshot.png
 ---
 
-Developed a real-time computer vision system that autonomously judges throw height in a dice game, eliminating subjective referee calls. The system uses a fixed camera and Raspberry Pi to track thrown objects against a reference line, providing immediate visual feedback through an LCD screen and RGB LEDs. This project demonstrated the challenges of deploying computer vision in uncontrolled lighting environments and the gap between proof-of-concept and reliable real-world operation.
+RefBot is a computer vision system I developed to automate throw height judging in a dice game, eliminating subjective referee decisions. Using a Raspberry Pi, USB camera, and OpenCV, the system tracks thrown objects relative to a reference line and provides immediate visual feedback through an LCD display and RGB LEDs. The project emphasized robust real-time vision, hardware integration, and the practical challenges of deploying computer vision in an unpredictable environment. 
 
-<img src="/images/Moneyshot.png" alt="Another view of RC Car" style="max-width:400px;">
+<img src="/images/Moneyshot.png" alt="RefBot system" style="max-width:700px;">
 
-### Key Contributions:
-- **Designed and built** a complete hardware-software system including camera mounting, electronics, and computational hardware
-- **Implemented** real-time object tracking using OpenCV contour detection and centroid analysis
-- **Developed** a robust height estimation algorithm compensating for motion blur
-- **Integrated** user feedback through LCD display and LED indicator system
-- **Deployed** and tested the system in live gameplay scenarios
+## Highlights
 
-### Technologies:
-Python · OpenCV · Raspberry Pi · Computer Vision · Real-Time Systems · Hardware Integration · Embedded Linux
+- Designed and built a complete computer vision system using Raspberry Pi and OpenCV
+- Developed a real-time object tracking algorithm based on contour detection and centroid analysis
+- Created a height estimation method combining centroid and peak detection to compensate for motion blur
+- Integrated LCD and RGB LED feedback for immediate height judgement indication
+- Deployed and evaluated the system during live gameplay
 
-### System Architecture:
+## Technical Stack
 
-**Hardware Setup**: Fixed Logitech USB webcam mounted above the playing area, connected to a Raspberry Pi 4. LEGO Technic frame enabled rapid prototyping and iteration without custom parts. Visual feedback provided through an LCD screen and RGB LEDs mounted on the frame.
+**Software:** Python · OpenCV · Raspberry Pi OS  
+**Hardware:** Raspberry Pi 4 · Logitech USB Camera · LCD Display · RGB LEDs  
+**Methods:** Computer Vision · Contour Detection · Embedded Systems · Real-Time Image Processing
 
-**Image Processing Pipeline**:
-1. Camera captures frames at ~15 FPS during gameplay
-2. Each frame is searched for white contours against a black backdrop (environmental simplification)
-3. For each detected contour, throw height is approximated using a weighted average of the contour's centroid and topmost pixel
-4. Processing continues until no contours are detected for a configurable number of consecutive frames
-5. Maximum height is calculated relative to a predefined reference line and converted from pixels to inches
-6. Results are displayed on the LCD with corresponding LED color (green = good throw, red = bad throw)
+## Results & Validation
 
-### Algorithm Design:
+<table>
+<tr>
+<td align="center" width="50%">
 
-The height estimation algorithm balances two competing factors:
-- **Motion blur sensitivity**: Using centroid provides stability against noise
-- **Peak detection accuracy**: Using topmost pixel captures the true maximum height
+<img src="/images/LCDOUTPUT.png" alt="LCD Output" style="max-width:100%;">
 
-The system combines both measurements to approximate throw height while mitigating the impact of motion blur on individual frames. A configurable frame buffer and timeout mechanism handles cases where the die temporarily leaves the camera's field of view during high throws.
+**1. Real-Time Decision Feedback**
+
+Throw height was calculated in real time and immediately displayed on the LCD while RGB LEDs provided clear visual pass/fail feedback.
+
+</td>
+
+<td align="center" width="50%">
+
+<img src="/images/Secondbest.png" alt="Gameplay" style="max-width:100%;">
+
+**2. Live System Deployment**
+
+The complete hardware system was successfully deployed during gameplay, demonstrating autonomous referee functionality.
+
+</td>
+</tr>
+</table>
+
+
+**3. Computer Vision Pipeline**
+
+The image processing algorithm detected object contours, estimated throw height relative to a calibrated reference line, and combined centroid and peak measurements to improve robustness against motion blur.
 
 <div class="grid">
   <div class="cell"><img src="/images/raw1c.png" alt=""></div>
@@ -49,45 +64,16 @@ The system combines both measurements to approximate throw height while mitigati
   <div class="cell"><img src="/images/bug3c.png" alt=""></div>
 </div>
 
-### Results:
+## Impact
 
-The system successfully differentiated legal from illegal throws during live gameplay, with post-game frame review enabling verification of close calls. The visual feedback system provided immediate, unambiguous decisions that reduced arguments and improved game fairness.
+RefBot demonstrates the integration of embedded computing, computer vision, and hardware design into a complete real-time system. Beyond implementing object detection, the project highlighted the importance of environmental engineering, including controlled lighting and background design for reliable computer vision deployment in real world conditions. The resulting system successfully reduced subjective referee decisions while providing immediate visual feedback and post-game verification.
 
-<img src="/images/LCDOUTPUT.png" alt="Good throw message" style="max-width:400px;">
+## Code
 
-**Performance Metrics**:
-- **Processing rate**: ~15 FPS (sufficient for throw detection)
-- **Detection reliability**: Robust under controlled lighting conditions
-- **Decision latency**: Real-time feedback (< 1 second per throw)
-- **Frame review**: Enabled furthermanual verification of all calls
+Source code and documentation are available on GitHub:
 
-### Challenges & Solutions:
-
-| Challenge | Solution |
-|-----------|----------|
-| Raspberry Pi Camera connectivity issues | Switched to USB Logitech webcam for reliability |
-| Lighting sensitivity and environment variation | Implemented black backdrop and backlighting; calibrated for specific lighting conditions |
-| Motion blur affecting height estimation | Combined centroid and topmost pixel measurements |
-| System integration complexity | Focused on basic functionality first; added features incrementally |
-| Unreliable deployment in live gameplay | Learned importance of extensive testing under realistic conditions |
+https://github.com/ianspehar99/RefBot
 
 
-<img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:200px;">
-<img src="/images/lightsetup.png" alt="Backlight so the ref can see" style="max-width:200px;">
 
-### Lessons Learned:
 
-- **Incremental development**: Testing basic functionality before adding complex features is essential, despite the temptation to implement everything at once
-- **Environmental engineering**: Successful computer vision often requires simplifying the environment as much as the algorithm (black backdrop, controlled lighting)
-- **Deployment gap**: The difference between a proof-of-concept and a reliable real-world system is substantial and requires extensive testing
-- **Robustness priority**: Reliability under pressure (and in front of others) is more important than algorithmic sophistication
-- **Integration challenges**: Combining perception, logic, electronics, and hardware into a functioning system requires significantly more time than expected
-
-### Impact:
-
-The system was deployed during live gameplay sessions, demonstrating real-world utility by reducing disputes and ensuring fair play. Frame review capability provided video-assisted referee functionality similar to professional sports systems, allowing players to verify controversial calls post-hoc.
-
-<img src="/images/Secondbest.png" alt="Another view of RC Car" style="max-width:400px;">
-
-### Code:
-[GitHub repository link](https://github.com/ianspehar99/RefBot)
