@@ -3,12 +3,12 @@ title: "SCAPE: Automated Process Control for Laser DED Additive Manufacturing"
 excerpt: "M.S. thesis on synchronized process control for robotic metal additive manufacturing"
 order: 1
 collection: portfolio
-image: /images/thesis/hero.png
+image: /images/thesis/kukameltio.png
 ---
 
 **SCAPE** (Scheduled Control for Automated Parameter Execution) is the software framework I developed for my M.S. thesis to automate synchronized process control on a KUKA–Meltio Laser Directed Energy Deposition (LDED) system. Because the hardware could not natively coordinate robot motion with laser parameter changes, I designed a scheduling and synchronization framework that executes parameter updates at precise physical locations during printing. The system enables automated generation of high-quality, machine-learning-ready datasets for additive manufacturing research.
 
-<img src="/images/thesis/hero.png" alt="KUKA-Meltio LDED system" style="max-width:700px;">
+<img src="/images/thesis/kukameltio.png" alt="KUKA-Meltio LDED system" style="max-width:700px;">
 
 ## Highlights
 
