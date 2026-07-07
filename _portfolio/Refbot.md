@@ -1,12 +1,14 @@
 ---
-title: "RefBot: Automated Video-Assisted Referee for Precision Throw Judging"
-excerpt: "Real-time computer vision system for autonomous throw height verification using Raspberry Pi and OpenCV"
+title: "RefBot: Robot Video-Assisted Referee for Precision Throw Judging"
+excerpt: "Real-time computer vision system for throw height verification"
 order: 3
 collection: portfolio
 image: /images/Moneyshot.png
 ---
 
 Developed a real-time computer vision system that autonomously judges throw height in a dice game, eliminating subjective referee calls. The system uses a fixed camera and Raspberry Pi to track thrown objects against a reference line, providing immediate visual feedback through an LCD screen and RGB LEDs. This project demonstrated the challenges of deploying computer vision in uncontrolled lighting environments and the gap between proof-of-concept and reliable real-world operation.
+
+<img src="/images/Moneyshot.png" alt="Another view of RC Car" style="max-width:400px;">
 
 ### Key Contributions:
 - **Designed and built** a complete hardware-software system including camera mounting, electronics, and computational hardware
@@ -23,7 +25,7 @@ Python · OpenCV · Raspberry Pi · Computer Vision · Real-Time Systems · Hard
 **Hardware Setup**: Fixed Logitech USB webcam mounted above the playing area, connected to a Raspberry Pi 4. LEGO Technic frame enabled rapid prototyping and iteration without custom parts. Visual feedback provided through an LCD screen and RGB LEDs mounted on the frame.
 
 **Image Processing Pipeline**:
-1. Camera captures frames at approximately 15 FPS during gameplay
+1. Camera captures frames at ~15 FPS during gameplay
 2. Each frame is searched for white contours against a black backdrop (environmental simplification)
 3. For each detected contour, throw height is approximated using a weighted average of the contour's centroid and topmost pixel
 4. Processing continues until no contours are detected for a configurable number of consecutive frames
@@ -38,17 +40,26 @@ The height estimation algorithm balances two competing factors:
 
 The system combines both measurements to approximate throw height while mitigating the impact of motion blur on individual frames. A configurable frame buffer and timeout mechanism handles cases where the die temporarily leaves the camera's field of view during high throws.
 
-[Keep your debug images showing contours and centroids]
+<div class="grid">
+  <div class="cell"><img src="/images/raw1c.png" alt=""></div>
+  <div class="cell"><img src="/images/raw2c.png" alt=""></div>
+  <div class="cell"><img src="/images/raw3c.png" alt=""></div>
+  <div class="cell"><img src="/images/bug1c.png" alt=""></div>
+  <div class="cell"><img src="/images/bug2c.png" alt=""></div>
+  <div class="cell"><img src="/images/bug3c.png" alt=""></div>
+</div>
 
 ### Results:
 
 The system successfully differentiated legal from illegal throws during live gameplay, with post-game frame review enabling verification of close calls. The visual feedback system provided immediate, unambiguous decisions that reduced arguments and improved game fairness.
 
+<img src="/images/LCDOUTPUT.png" alt="Good throw message" style="max-width:400px;">
+
 **Performance Metrics**:
 - **Processing rate**: ~15 FPS (sufficient for throw detection)
 - **Detection reliability**: Robust under controlled lighting conditions
 - **Decision latency**: Real-time feedback (< 1 second per throw)
-- **Frame review**: Enabled post-hoc verification of all calls
+- **Frame review**: Enabled furthermanual verification of all calls
 
 ### Challenges & Solutions:
 
@@ -60,7 +71,9 @@ The system successfully differentiated legal from illegal throws during live gam
 | System integration complexity | Focused on basic functionality first; added features incrementally |
 | Unreliable deployment in live gameplay | Learned importance of extensive testing under realistic conditions |
 
-[Keep your images showing the setup and backlight]
+
+<img src="/images/sheetinback.png" alt="Black background sheet" style="max-width:200px;">
+<img src="/images/lightsetup.png" alt="Backlight so the ref can see" style="max-width:200px;">
 
 ### Lessons Learned:
 
@@ -73,6 +86,8 @@ The system successfully differentiated legal from illegal throws during live gam
 ### Impact:
 
 The system was deployed during live gameplay sessions, demonstrating real-world utility by reducing disputes and ensuring fair play. Frame review capability provided video-assisted referee functionality similar to professional sports systems, allowing players to verify controversial calls post-hoc.
+
+<img src="/images/Secondbest.png" alt="Another view of RC Car" style="max-width:400px;">
 
 ### Code:
 [GitHub repository link](https://github.com/ianspehar99/RefBot)

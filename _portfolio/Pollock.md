@@ -1,21 +1,21 @@
 ---
-title: "Pollock: Autonomous Image-to-Painting Robot"
-excerpt: "Kinova robot arm that analyzes images and translates them into artistic brush stroke paintings"
+title: "Pollock: The Painting Robot"
+excerpt: "Kinova robot arm that turns input images into paintings"
 order: 4
 collection: portfolio
 image: /images/pollockms.png
 ---
 
-Developed the core algorithmic pipeline for an autonomous painting robot that analyzes input images and translates them into artistic interpretations using a Kinova robot arm. The system processes visual data through contour detection and path planning to generate sequential brush stroke commands, producing physical paintings that resemble the original source images.
+Developed the core algorithm for an autonomous painting robot that analyzes input images and translates them into artistic interpretations using a Kinova robot arm. The system processes visual data through contour detection and path planning to generate sequential brush stroke commands, producing physical paintings resembling the original source images.
 
 ### Key Contributions:
 - **Designed and implemented** the complete image-to-command pipeline for robotic painting
-- **Developed** contour detection and point condensation algorithms for image simplification
+- **Developed** contour detection and point grouping algorithms for image simplification
 - **Created** advanced pathing logic for sequenced brush stroke generation
 - **Integrated** brush stroke command generation for Kinova robot execution
 
 ### Technologies:
-Python · OpenCV · Kinova Robotics · Computer Vision · Path Planning · Image Processing · Robotics · Brush Stroke Generation
+Python · OpenCV · Kinova Robotics · Computer Vision · K-Means Clustering · Path Planning · Image Processing · Robotics · Brush Stroke Generation
 
 ### System Architecture:
 
@@ -61,7 +61,7 @@ The system successfully generates paintings that:
 |-----------|----------|
 | Converting image data to robotic motion | Implemented contour detection and point condensation pipeline |
 | Stroke sequencing for coherent art | Developed advanced pathing logic with visual coherence optimization |
-| Balancing representation with interpretation | Designed artistic translation parameters allowing adjustable abstraction levels |
+| Balancing representation with interpretation | Designed artistic translation parameters allowing adjustable abstraction levels depending on brush and canvas size|
 
 ### Future Improvements:
 

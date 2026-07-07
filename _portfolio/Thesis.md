@@ -1,54 +1,75 @@
 ---
 title: "SCAPE: Automated Process Control for Laser DED Additive Manufacturing"
-excerpt: "Software framework for synchronizing robot motion with real-time process parameter changes during laser directed energy deposition"
-order: 1  # Put this first - it's your thesis!
-collection: portfolio
-image: /images/scape_setup.jpg  # Add a photo of your experimental setup
----
----
-title: "SCAPE: Synchronized Process Control for Laser Directed Energy Deposition"
-excerpt: "Software framework for automating synchronized robot motion and real-time process parameter changes during laser DED additive manufacturing"
+excerpt: "M.S. thesis on synchronized process control for robotic metal additive manufacturing"
 order: 1
 collection: portfolio
-image: /images/scape_setup.jpg
+image: /images/thesis/hero.png
 ---
 
-**SCAPE** (Scheduled Control for Automated Parameter Execution) is a software framework I developed for my M.S. thesis that automates synchronized process control for a Kuka-Meltio Laser Directed Energy Deposition (LDED) system. The framework coordinates 6-DOF robot motion with real-time laser power and material feed rate changes at precise physical locations, enabling generation of labeled manufacturing datasets for machine learning research.
+**SCAPE** (Scheduled Control for Automated Parameter Execution) is the software framework I developed for my M.S. thesis to automate synchronized process control on a KUKA–Meltio Laser Directed Energy Deposition (LDED) system. Because the hardware could not natively coordinate robot motion with laser parameter changes, I designed a scheduling and synchronization framework that executes parameter updates at precise physical locations during printing. The system enables automated generation of high-quality, machine-learning-ready datasets for additive manufacturing research.
 
-### Key Contributions:
-- **Designed and implemented** control software architecture in Python
-- **Integrated** with KUKA robotic manufacturing platform and Meltio printer
-- **Enabled systematic generation** of labeled datasets for ML research
-- **Validated** through additive manufacturing trials and statistical analysis
-- **Achieved** reliable synchronization with measurable geometric changes
+<img src="/images/thesis/hero.png" alt="KUKA-Meltio LDED system" style="max-width:700px;">
 
-### Technologies:
-Python · KUKA Robotics · Meltio 3D Printer · LDED · Motion Control · Manufacturing Automation · Experimental Design · Statistical Analysis
+## Highlights
 
-### System Architecture:
+- Designed and implemented a Python automation framework for robotic metal additive manufacturing
+- Developed algorithms to automatically modify KUKA robot programs and generate synchronized parameter schedules
+- Created timing compensation and resynchronization methods to overcome machine latency and prevent cumulative timing drift
+- Automated logging of robot position, travel speed, laser power, and feed rate for labeled dataset generation
+- Experimentally validated synchronization through additive manufacturing trials and statistical analysis
 
-**Two-stream coordination**: SCAPE synchronizes (1) 6-DOF KUKA robot motion with (2) laser power and material feed rate changes, triggering parameter updates based on the robot's physical position during printing.
+## Technical Stack
 
-**Data generation**: Logs synchronized position, laser power, and feed rate data at each physical location, enabling labeled dataset creation for process monitoring and ML applications.
+**Software:** Python · Automation · Control Algorithms · Data Logging  
+**Hardware:** KUKA KR20 Robot · Meltio M450 LDED System  
+**Methods:** Experimental Design · Statistical Analysis · Machine Learning Dataset Generation
 
-### Experimental Validation:
-- Designed trials with controlled parameter variations (laser power, feed rate)
-- Collected synchronized process data and post-print geometry measurements
-- Performed statistical analysis confirming significant geometric changes between process states
+## Results & Validation
 
-### Results:
-✅ Reliable synchronization across multiple print trials
-✅ Measurable geometric changes corresponding to commanded states
-✅ Systematic dataset generation for ML research
-✅ Statistically significant process-structure relationships
+<table>
+<tr>
+<td align="center" width="33%">
 
-### Lessons Learned:
-- Real-time coordination requires careful timing and communication management
-- Industrial integration demands understanding of proprietary protocols
-- ML-ready datasets require thoughtful experimental design
+<img src="/images/thesis/map.png" alt="Parameter Map" style="max-width:100%;">
 
-### Link to Thesis:
-[Add link]
+**1. Planned Parameter Schedule**
 
-### Code:
-[Add link if available]
+Generated synchronized parameter maps defining where laser power and feed rate changes should occur during printing.
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="/images/thesis/print.png" alt="Printed Part" style="max-width:100%;">
+
+**2. Manufactured Part**
+
+SCAPE executed parameter changes at the intended locations, producing visible geometric differences along the toolpath.
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="/images/thesis/topo.png" alt="Topography Validation" style="max-width:100%;">
+
+**3. Experimental Validation**
+
+3D surface scans confirmed that the resulting geometry matched the planned parameter schedule, validating synchronization accuracy.
+
+</td>
+</tr>
+</table>
+
+## Impact
+
+SCAPE transforms a manual experimental workflow into an automated, repeatable pipeline for generating high-quality labeled datasets for machine learning. The framework serves as the foundation for future closed-loop monitoring and autonomous process control in laser directed energy deposition.
+
+## Thesis
+
+**Paper currently under peer review.**
+
+## Code
+
+Source code and documentation are available on GitHub:
+
+https://github.com/ianspehar99/LDED-ML-Project
