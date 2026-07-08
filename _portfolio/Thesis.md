@@ -1,6 +1,6 @@
 ---
-title: "Automated Framework for Time-Aligned LDED Machine Learning Dataset Generation"
-excerpt: "M.S. thesis on automated parameter control for robotic metal additive manufacturing"
+title: "SCAPE: Automated Framework for LDED Machine Learning Dataset Generation"
+excerpt: "M.S. thesis on automated parameter control of robotic metal additive manufacturing"
 order: 1
 collection: portfolio
 image: /images/thesis/SCAPE pic.png
