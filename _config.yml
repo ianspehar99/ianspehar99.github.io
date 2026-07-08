@@ -21,10 +21,10 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/headshot.png"
+  avatar           : "headshot.png"
   name             : "Ian Spehar"
   pronouns         : # example: "she/her"  
-  bio              : "MS in Mechanical Engineering and Robotics at OSU"
+  bio              : "Graduated with M.S. in Mechanical Engineering and Robotics from Oregon State University"
   location         : "Corvallis, OR"
   employer         : "Oregon State University"
   uri              : # URL
