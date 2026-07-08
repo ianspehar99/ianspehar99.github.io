@@ -11,13 +11,12 @@ redirect_from:
 About Me
 =====
 ***
-I recently graduated from Oregon State University with a Master of Science in Mechanical Engineering and a Minor in Robotics. I'm passionate about developing robotic systems that solve real-world engineering challenges, with interests in manufacturing automation, renewable energy, and environmental sustainability.
 
-For my master's thesis, I developed SCAPE, an automation framework for robotic Laser Directed Energy Deposition (LDED) that synchronizes robot motion with manufacturing process control to generate datasets for machine learning research. The project combined robotics, software development, additive manufacturing, and supervised learning training for process optimization.
+I recently graduated from Oregon State University with an M.S. in Mechanical Engineering and a Minor in Robotics. I am passionate about developing robotic systems and automation technologies that solve real-world engineering challenges, with interests spanning robotics, advanced manufacturing, and sustainable technologies.
 
-I enjoy building intelligent robotic systems, developing automation software, and tackling complex engineering problems through creative, practical solutions. Whether working on autonomous robots, manufacturing systems, or research projects, I strive to create technology that is both innovative and impactful.
+My master's thesis focused on SCAPE, an automation framework for robotic Laser Directed Energy Deposition (LDED) that synchronizes robot motion with manufacturing process control to enable large-scale dataset production for machine learning training. This work combined robotics, software development, additive manufacturing, and embedded software-hardware integration.
 
-Feel free to explore my portfolio and resume to learn more about my projects and experience, and don't hesitate to reach out if you'd like to connect!
+I enjoy designing intelligent robotic systems, developing automation software, and tackling complex engineering problems through practical, creative solutions. Explore my portfolio and resume to learn more about my projects and experience.
 
 Achievements
 =====
