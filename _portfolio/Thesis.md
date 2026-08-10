@@ -11,13 +11,14 @@ image: /images/thesis/SCAPE pic.png
 I designed SCAPE to close that gap: it automatically generates and modifies KUKA motion programs, schedules parameter changes to specific physical locations along the toolpath, and drives the printhead interface directly to execute those changes in sync with the robot's motion — all while logging everything needed to reconstruct exactly what happened, where. The result is a system that turns a manual, one-off experimental process into an automated, repeatable pipeline for generating high-quality, labeled datasets for additive manufacturing machine learning research.
 
 <img src="/images/thesis/kukameltio.png" alt="KUKA-Meltio LDED system" style="max-width:700px;">
-Highlights
-Designed and implemented a Python automation framework for robotic metal additive manufacturing, synchronizing KUKA robot motion — including travel speed defined in the motion program — with externally controlled laser power and wire feed rate
-Developed algorithms to automatically generate and modify KUKA robot motion programs across varying toolpath patterns, paired with synchronized parameter schedules for systematic process-variable data collection
-Built timing compensation and resynchronization methods to correct for machine latency between robot motion and external parameter entry, preventing cumulative drift over long autonomous builds
-Automated parameter entry through the printhead interface using PyAutoGUI, executing scheduled changes to within 0.05 seconds of planned timing
-Automated logging of robot position, travel speed, laser power, and feed rate in real time, correlating each parameter state to its exact print location for labeled dataset generation
-Experimentally validated synchronization accuracy through additive manufacturing trials and statistical analysis, confirming sub-millimeter alignment between planned and executed parameter changes
+
+## Highlights
+
+- Designed and implemented a Python automation framework for robotic metal additive manufacturing
+- Developed algorithms to automatically modify KUKA robot programs and generate synchronized parameter schedules
+- Created timing compensation and resynchronization methods to overcome machine latency and prevent cumulative timing drift
+- Automated logging of robot position, travel speed, laser power, and feed rate for labeled dataset generation
+- Experimentally validated synchronization accuracy through additive manufacturing trials and statistical analysis
 Technical Stack
 
 Software: Python · PyAutoGUI · Automation · Control Algorithms · Data Logging
