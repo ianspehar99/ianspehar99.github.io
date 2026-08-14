@@ -19,13 +19,14 @@ I designed SCAPE to close that gap: it automatically generates and modifies KUKA
 - Created timing compensation and resynchronization methods to overcome machine latency and prevent cumulative timing drift
 - Automated logging of robot position, travel speed, laser power, and feed rate for labeled dataset generation
 - Experimentally validated synchronization accuracy through additive manufacturing trials and statistical analysis
-Technical Stack
+
+## Technical Stack
 
 Software: Python · PyAutoGUI · Automation · Control Algorithms · Data Logging
 Hardware: KUKA KR20 Robot · Meltio M450 LDED System
 Methods: Experimental Design · Robotic Automation · Timing/Latency Compensation · Statistical Analysis · Machine Learning Dataset Generation
 
-Results & Validation
+## Results & Validation
 <table> <tr> <td align="center" width="50%"> <img src="/images/thesis/map.png" alt="Parameter Map" style="max-width:100%;">
 Planned Parameter Schedule
 
@@ -42,15 +43,16 @@ Experimental Validation
 3D surface scans confirmed that the resulting geometry matched the planned parameter schedule, validating synchronization accuracy within ~0.5 mm — with parameter entry timing accurate to within 0.05 seconds of the planned schedule.
 
 </div>
-Impact
+
+## Impact
 
 SCAPE transforms a manual, hand-timed experimental workflow into a fully automated, repeatable pipeline for generating high-quality labeled datasets for machine learning training — eliminating a major bottleneck in collecting the volume and consistency of data that ML models need. By solving the underlying synchronization problem between a robot's internal motion program and externally controlled process parameters, the framework serves as the foundation for future ML-based closed-loop monitoring and autonomous process control in LDED, with the underlying approach generalizable to other robotic manufacturing platforms facing similar multi-system coordination challenges.
 
-Thesis
+## Thesis
 
 Paper currently under peer review.
 
-Code
+## Code
 
 Source code and documentation are available on GitHub:
 
