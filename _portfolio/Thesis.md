@@ -28,17 +28,17 @@ Methods: Experimental Design · Robotic Automation · Timing/Latency Compensatio
 
 ## Results & Validation
 <table> <tr> <td align="center" width="50%"> <img src="/images/thesis/map.png" alt="Parameter Map" style="max-width:100%;">
-Planned Parameter Schedule
+<strong>Planned Parameter Schedule</strong>
 
 Generated synchronized parameter maps defining where laser power and feed rate changes should occur during printing.
 
 </td> <td align="center" width="50%"> <img src="/images/thesis/print.png" alt="Printed Part" style="max-width:100%;">
-Resulting Print
+<strong>Resulting Print:</strong>
 
 SCAPE executed parameter changes at the intended locations, producing visible geometric differences along the print pattern.
 
 </td> </tr> </table> <div align="center"> <img src="/images/thesis/topo.png" alt="Topography Validation" style="max-width:850px; width:100%;">
-Experimental Validation
+<strong>Experimental Validation:</strong>
 
 3D surface scans confirmed that the resulting geometry matched the planned parameter schedule, validating synchronization accuracy within ~0.5 mm — with parameter entry timing accurate to within 0.05 seconds of the planned schedule.
 
