@@ -52,8 +52,8 @@ SCAPE transforms a manual, hand-timed experimental workflow into a fully automat
 
 Paper currently under peer review.
 
-## Code
+<h2>Code</h2>
 
-Source code and documentation are available on GitHub:
-
-https://github.com/ianspehar99/LDED-ML-Project
+<p>Source code and documentation are available on 
+<a href="https://github.com/ianspehar99/LDED-ML-Project" target="_blank">GitHub</a>.
+</p>

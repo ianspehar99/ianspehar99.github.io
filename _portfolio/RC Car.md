@@ -64,8 +64,8 @@ The embedded software managed wireless controller communication, motor control, 
 
 This project demonstrates complete mechatronic system development, from hardware construction and electrical integration to software implementation. By combining mechanical design, electronics, and control algorithms into a single platform, the project provided practical experience developing reliable robotic systems. 
 
-## Code
+<h2>Code</h2>
 
-Source code and documentation are available on GitHub:
-
-https://github.com/ianspehar99/RC-Car
+<p>Source code and documentation are available on 
+<a href="https://github.com/ianspehar99/RC-Car" target="_blank">GitHub</a>.
+</p>

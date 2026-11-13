@@ -73,8 +73,9 @@ The simplified trajectory was executed by the Kinova robot arm, producing a phys
 
 Pollock demonstrates the integration of computer vision, path planning, and robotic manipulation into a complete autonomous painting system. The project explores how visual information can be transformed into executable robot trajectories while balancing image fidelity with the physical limitations of the robotic end effector. By bridging perception, motion planning, and physical execution, the framework provides a foundation for future applications in robotic drawing, automated art generation, and creative manufacturing.
 
-## Code
 
-Source code and documentation are available on GitHub:
+<h2>Code</h2>
 
-https://github.com/ianspehar99/Pollock
+<p>Source code and documentation are available on 
+<a href="https://github.com/ianspehar99/Pollock" target="_blank">GitHub</a>.
+</p>

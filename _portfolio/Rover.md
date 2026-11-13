@@ -76,8 +76,8 @@ The complete system was validated in Gazebo simulation through repeated autonomo
 
 This project demonstrates the integration of perception, planning, and control into a complete autonomous robotic system. Beyond implementing individual algorithms, the work focused on designing a modular ROS2 architecture capable of coordinating multiple sensing and decision-making components. The resulting framework provides a foundation for future development on physical rover hardware and more advanced autonomous search behaviors.
 
-## Code
+<h2>Code</h2>
 
-Source code and documentation are available on GitHub:
-
-https://github.com/ianspehar99/ROB599_Rover_Search_Project
+<p>Source code and documentation are available on 
+<a href="https://github.com/ianspehar99/ROB599_Rover_Search_Project" target="_blank">GitHub</a>.
+</p>

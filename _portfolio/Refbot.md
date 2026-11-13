@@ -68,11 +68,13 @@ The image processing algorithm detected object contours, estimated throw height 
 
 RefBot demonstrates the integration of embedded computing, computer vision, and hardware design into a complete real-time system. Beyond implementing object detection, the project highlighted the importance of environmental engineering, including controlled lighting and background design for reliable computer vision deployment in real world conditions. The resulting system successfully reduced subjective referee decisions while providing immediate visual feedback and post-game verification.
 
-## Code
 
-Source code and documentation are available on GitHub:
+<h2>Code</h2>
 
-https://github.com/ianspehar99/RefBot
+<p>Source code and documentation are available on 
+<a href="
+https://github.com/ianspehar99/RefBot" target="_blank">GitHub</a>.
+</p>
 
 
 
